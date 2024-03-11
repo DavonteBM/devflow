@@ -53,7 +53,7 @@ const ProjectEdit = () => {
       body: JSON.stringify(project),
     });
     setProject(initialFormState);
-    navigate("/myprojects");
+    navigate("/");
   };
 
   const title = (

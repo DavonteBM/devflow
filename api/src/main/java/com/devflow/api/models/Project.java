@@ -36,7 +36,7 @@ public class Project {
     @Column(name = "ProjectDueDate")
     private String projectDueDate;
     @Column(name = "IsProjectInProgress")
-    private String isProjectInProgress = "false";
+    private String isProjectInProgress;
 
     @Column(name = "ClientFirstName", nullable = false)
     private String clientFirstName;

@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/myprojects" element={<ProjectList />} />
+        <Route path="/" element={<ProjectList />} />
         <Route path="/project/:id" element={<ProjectEdit />} />
       </Routes>
     </Router>

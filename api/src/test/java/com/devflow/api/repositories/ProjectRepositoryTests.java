@@ -71,10 +71,10 @@ class ProjectRepositoryTests {
     @DisplayName("Testing get Project by Id Repository")
     public void getProjectbyIdTest(){
         //When
-        Project project = projectRepository.findById(27L).get();
+        Project project = projectRepository.findById(3L).get();
 
         //Then
-        Assertions.assertThat(project.getId()).isEqualTo(27L);
+        Assertions.assertThat(project.getId()).isEqualTo(3L);
 
     }
 
@@ -85,7 +85,7 @@ class ProjectRepositoryTests {
     public void updateProjectTest(){
 
         //Given
-        Project project = projectRepository.findById(27L).get();
+        Project project = projectRepository.findById(3L).get();
 
         project.setProjectName("This Name Has been updated");
         project.setProjectDescription("This Has been updated");
@@ -133,12 +133,12 @@ class ProjectRepositoryTests {
     @DisplayName("Testing Delete Project by Id Repository")
     public void deleteProjectbyIdTest(){
         //Given
-        Project project = projectRepository.findById(27L).get();
+        Project project = projectRepository.findById(3L).get();
 
         //When
         try {
             projectRepository.delete(project);
-            Project project1 = projectRepository.findById(27L).get();
+            Project project1 = projectRepository.findById(3L).get();
 
         } catch (NoSuchElementException e) {
             //Then

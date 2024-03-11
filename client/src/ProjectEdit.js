@@ -262,7 +262,7 @@ const ProjectEdit = () => {
             <Button color="success" type="submit">
               Save
             </Button>{" "}
-            <Button color="secondary" tag={Link} to="/myprojects">
+            <Button color="secondary" tag={Link} to="/">
               Cancel
             </Button>
           </FormGroup>

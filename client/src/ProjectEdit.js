@@ -29,7 +29,7 @@ const ProjectEdit = () => {
 
   useEffect(() => {
     if (id !== "new") {
-      fetch(`/api/project/${id}`)
+      fetch(`https://df-latest.onrender.com/api/project/${id}`)
         .then((response) => response.json())
         .then((data) => setProject(data));
     }
@@ -44,14 +44,19 @@ const ProjectEdit = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await fetch(`/api/project${project.id ? `/${project.id}` : ""}`, {
-      method: project.id ? "PUT" : "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(project),
-    });
+    await fetch(
+      `https://df-latest.onrender.com/api/project${
+        project.id ? `/${project.id}` : ""
+      }`,
+      {
+        method: project.id ? "PUT" : "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(project),
+      }
+    );
     setProject(initialFormState);
     navigate("/");
   };

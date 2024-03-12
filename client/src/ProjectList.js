@@ -11,7 +11,7 @@ const ProjectList = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch("api/projects")
+    fetch("https://df-latest.onrender.com/api/projects")
       .then((response) => response.json())
       .then((data) => {
         setProjects(data);
@@ -20,7 +20,7 @@ const ProjectList = () => {
   }, []);
 
   const remove = async (id) => {
-    await fetch(`/api/project/${id}`, {
+    await fetch(`https://df-latest.onrender.com/api/project/${id}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
